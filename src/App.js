@@ -28,7 +28,7 @@ function App() {
 
   const completeTodo = (index) => {
     const newTodos = [...todos];
-    newTodos[index].isCompleted = true;
+    newTodos[index].isCompleted = !newTodos[index].isCompleted;
     setTodos(newTodos);
   };
 
@@ -37,6 +37,8 @@ function App() {
     newTodos.splice(index, 1);
     setTodos(newTodos);
   };
+
+
 
   // template 
   return (
