@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import TodoItem from "./components/TodoItem";
 import TodoForm from "./components/TodoForm";
+import "./App.css";
 
 function App() {
   //  variables 
@@ -18,12 +19,14 @@ function App() {
 
   // template 
   return (
-    <div>
-      <h1>My To Do List</h1>
-      {todos.map((todo, index) => (
-        <TodoItem todo={todo} key={index} />
-      ))}
-      <TodoForm addTodo={addTodo} />
+    <div className="app">
+      <div className="todo-list">
+        <h1>My To Do List</h1>
+        {todos.map((todo, index) => (
+          <TodoItem todo={todo} key={index} />
+        ))}
+        <TodoForm addTodo={addTodo} />
+      </div>
     </div>
   );
 }
